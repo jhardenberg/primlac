@@ -1,0 +1,32 @@
+% ------------------------------------------
+% Parameter file for lac.F
+% Please do not change the order of these.
+% ------------------------------------------
+
+0.16  	%* k_bg    [1/m]					Background turbidity	  
+0.03e-3 %* k_S     [1/m*mg^-1*m^3] 	Specific light attenuation of sediment (sediment turbidity)		:    
+0.03e-3 %* k_D     [1/m*mg^-1*m^3] 	Specific light attenuation of detritus		 
+0.009	%* mN1_D   [] 			Stoechiometric ratio of Phosphorus wrt detritus biomass
+0.0019	%* k_P1	   [1/m*mg^-1*m^3] 	Specific light attenuation of Chlorella  (P1)  	  
+4.7e-5  %* k_P2	   [1/m*mg^-1*m^3] 	Specific light attenuation of Microcystis  (P2)
+0.0018  %* mN1_P1  [] 		 	Stoechiometric ratio of Phosphorus wrt biomass per cell of P1	:Equation for Detritus
+0.0018	%* mN1_P2  [] 			Stoechiometric ratio of Phosphorus wrt biomass per cell of  P2  
+0.144 	%+ l_P1    [1/days] 		Loss rate of Chlorella 		: 
+0.096   %+ l_P2    [1/days] 		Loss rate of Microcystis
+0.0018	%* mN1_Z   [] 			Stechiometric ratio of Phosphorus wrt biomass per cell of Z 
+0.17	%+ l_Z     [1/days]  		Specific loss rate of Daphnia
+0.7	%* e_z     [] 			Fraction of Phyto used by zoo for growth 
+30.	%+ time_D  [days] 		conversion time of detritus to nutrient by bacteria 
+0.6	%+ mu_z    [1/days] 		Maximum specific growth rate of Daphnia 
+400	%* P_c     [mg/m^3] 		Half-saturation constant of Daphnia 
+1.2     %+ mu_P1   [1/days]   		:Equation for Nutrient 
+6.	%* N_P1_c  [mg/m^3]            	density 
+40.	%* I_P1_c  [light units][micromol photons/m^2 /s]
+0.192	%+ mu_P2   [1/days]
+20.	%* N_P2_c  [density] [mg/m^3] 
+40.	%* I_P2_c  [light units] [micromol photons/m^2 /s]
+0.8	%* alpha   [] Selectivity factor 	:Equation for Phyto 1 and Phyto 2
+40.	%* I_P2_c  [light units] [micromol photons/m^2 /s]
+0.	%+ gamma_c [1/days] Maximum rate of Zoo grazing by Fish 	:Equation for Zooplankton
+1.	%*?? Z_c   [fish biomass density]  [mg/m^3] Half-saturation constant of Fish     
+0.	%* Fish    [fish biomass densisty] [mg/m^3] Amount of Fish

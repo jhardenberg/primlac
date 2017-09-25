@@ -1,0 +1,41 @@
+% ------------------------------------------
+% Parameter file for lac.F
+% Please do not change the order of these.
+% ------------------------------------------
+
+50000  % numtime	: Run length in time steps (1 day here with ddt=0.125 seconds )using ddt and 86400 seconds per day
+1000  	% nsave		: How often to save, in steps
+100 	% ncfl		: How often to check CFL, save scalars and print diagnostics, in steps
+0.05	% ddt		: Time step [s] Modified by NNT
+60. 	% domainx 	: Domain size in the x direction [m]
+1. 	% domainy	: Domain size in the y direction [m]
+15   	% depth	   	: Basin depth amplitude [m] when readbathy is not used/ when readbathy used this is a scaling factor
+0.	% windangle	: Surface wind stress angle in degrees 
+2.209 % uwindamp	: Module of surface air speed [m/s]
+0.00189   % 0.0     % znu		: Horizontal diffusivity
+0.00189   % 1e-6    % kvmin         : Minimum vertical diffusivity when Mixing length model is used [m^2/s] or constant diffusivity
+.false.         % restart       : set to .true.  to restart from restart.unf
+.true. 	% readbathy  	: set to .true.  to read an external bathymetry file (logical)  
+.false. 	% readmask   	: set to .true.  to read an external lake-land mask  (logical) works only when readbathy  is false. If readmask is FALSE it is a swimming pool mask.
+.false.     % use immboundary
+output.unf
+bathy256.dat
+mask16.dat   %    llmfile  ORDER  NEUTRAL SEDIMENT DETRITUS NUTRIENT  ZOO PHYTO1 PHYTO2
+immbound256.dat
+0.1							% zmin	 : minimum depth usrd to regularize the bathymetry
+0.002							% tau_ce : Critical bottom stress for erosion[N/m^2]  0.0009-0.25 (Chao et al 2008) 
+864000 % 0.8640							% erom   : Erodibility coefficient [mg/m^2/day] 		
+0.  0.99999   0.      0.00001   0.    0.       0.	% betac	 : Percentage of sediment for NEUTRAL, SEDIMENT, DETRITUS, NUTRIENT, ZOO,  PHYTO1, PHYTO2
+0. -100.    -1.    0        0.  -0.11    11.8 %  0. -10.    -1.    0        0.  -0.11    11.8 	% wsett  : Settling velocity [m/day]                    0. -17.0 -616.0 0 -0.11 0   wP2=-11.8	
+0.  0.01   0.0294    1.       1.  0.002    0.0004   % 0.  0.0098   0.0294    1.       1.  0.002    0.0004 	% tau_cd : Critical bottom stress for deposition [N/m^2] 0. 0.0098 0.0294 0. 0. 0.002 0.0004 %    0.01  0.004 per microcystis
+0.  0.       0.        0.      1e-5  0.      0.    	% sdiff [m^2/s] constant vertical background diffusivity of tracers (in addition to momentum diffusivity) The ZOO moves!
+0.							% ctopnut: Nutrient flux at the top [mg/m^2/day]
+0.5 		  	   				% cinnut : Nutrient flux from sediment [mg/m^2/day]  
+1. 			   				% spongefac 
+1.   0.         0.     8.     100.  470.     20. 	% cinit  : Initial concentrations [mg/m^3]
+5			   				% Tinit  : Water initial Temperature in celsius
+10		   				% Tair   : Air Temperature in celsius
+1.0                      				% hsurf  : transfer coefficient for temperature [m/s] when Radiation is not active % 0.3 
+250     						%* phi_top [W/m^2 /s] 	Top incident light intensity (This is the maximum! not the daily mean)
+
+
