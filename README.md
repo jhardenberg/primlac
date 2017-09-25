@@ -1,7 +1,7 @@
 # primlac
 ## Primitive equations solver for shallow lakes
 
-Copyright (c)
+Authors
 - Jost von Hardenberg - ISAC-CNR - 3/2009 - 2/2010
 - Maurice Rossi       - UPMC-CNRS    
 
